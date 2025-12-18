@@ -28,15 +28,15 @@
 			color: #8e61ff;
 		}		
 		/* Flex Layout */
-		article.flex-grid {
+		.info-section {
+			display: flex;
+			flex-direction: row;
+		}
+		.subsection {
 			display: flex;
 			flex-direction: column;
 			flex: 1 0;
 			justify-content: space-evenly;
-		}
-		section.flex-grid {
-			display: flex;
-			flex-direction: row;
 		}
 		div.flex-grid {
 			display: flex;
@@ -99,15 +99,14 @@
 </head>
 <body>
 	<header>
-		<section class="flex-grid">
+		<div class="info-section">
 
 			<aside class="flex-item">
 				<img src="img/nscape/nscape_logo.png" alt="Netscape Logo" class="center" style="max-height: 175px;">
 			</aside>
-
 			<article class="flex-grid">
 				<div class="flex-item center" style="line-height: 0.5;">
-					<div style="line-height: 0;">
+					<div style="line-height: 0.25;">
 						<h1 style="font-size: 2em;">
 							<b>Neoscape Navigator</b> <sup><small>(TM)</small></sup>
 						</h1>
@@ -124,31 +123,30 @@
 						click the <b>Neoscape</b> logo at the right side of the <b>Ribbon Bar</b>.
 					</p>
 					<p>
-						<small>This software is subject to absolutely nothing, as set forth in the non-existent agreement.</small>
+						<small>Use of this software is subject to absolutely no agreements, as set forth in the non-existent EULA.</small>
 					</p>
 				</nav>
 			</article>
-
-		</section>
+		</div>
 	</header>
-	<hr>
+	
 	<main>
-
-		<section class="flex-grid">
+		<hr>
+		<div class="info-section">
 			<aside class="flex-item">
 				<img src="img/nscape/jvs2.png" alt="Java Logo" class="center" style="max-height: 128px;">
 			</aside>
 
-			<article class="flex-grid">
+			<div class="subsection">
 				<p>
 					Contains Java&trade; software, developed by Sun Microsystems, Inc.<br>
 					Copyright &copy; 1995-1999 Sun Microsystems, Inc. All Rights Reserved.
 				</p>
-			</article>
-		</section>
+			</div>
+		</div>
 		<hr>
 
-		<section class="flex-grid">
+		<div class="info-section">
 			<aside class="flex-item">
 				<img src="img/nscape/qm.gif" alt="Help section" class="center">
 			</aside>
@@ -187,7 +185,7 @@
 						<p>
 							This will take you back to the future, should you really wish to return.
 						</p>
-						<small>Click <a href="index.html">here</a> to jump back to the future if you came here by without your Neoscape browser!</small>
+						<small>Click <a href="index.html" target="_top">here</a> to jump back to the future if you came here by without your Neoscape browser!</small>
 					</div>
 					<div class="flex-item">
 						<p style="text-align: center;">
@@ -195,16 +193,19 @@
 						</p>
 						<p>
 							In the top right corner, clicking any of these will let you view the page in a <em>modern browser</em>.<br>
-							<small>(<b>This may be necessary to view linked external pages!</b>)</small>
+							<!-- <small>(<b>This may be necessary to view linked external pages!</b>)</small> -->
 						</p>
 					</div>
 				</div>
-				<p><small>If you have issues following links on any of these pages, use the <b>Window Butttons</b> or try opening in a new tab with a 'middle-click' if you have a newer pointing device with a clickable scrollwheel.</small></p>
+				<p><small>
+					If you have issues following links on any of these pages, use the <b>Window Butttons</b> or try opening in a new tab with a 'middle-click' if you have a newer pointing device with a clickable scrollwheel.<br>
+					External pages should open fine now!
+				</small></p>
 			</article>
-		</section>
+		</div>
 		<hr>
 
-		<section class="flex-grid">
+		<div class="info-section">
 			<aside class="flex-item">
 				<img src="img/nscape/new.gif" alt="New Pages" class="center" style="height: 75px;">
 			</aside>
@@ -225,7 +226,7 @@
 					</li>
 				</ul>
 			</article>
-		</section>
+		</div>
 
 	</main>
 	<hr>
@@ -240,7 +241,7 @@
 				bundling Internet Explorer with copies of windows, it ended up completely undercutting Netscape's market share.
 			</p>
 			<p>
-				Most of this UI was based off of <a href="https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856">netscape.html - A simple netscape UI in HTML</a> by <a href="https://github.com/opaeoh">opaeoh</a>. 
+				Most of this UI was based off of <a href="https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856" target="_top">netscape.html - A simple netscape UI in HTML</a> by <a href="https://github.com/opaeoh">opaeoh</a>. 
 				Though I made many modifications, especially in making the UI somewhat functional.
 			</p>
 		</article>

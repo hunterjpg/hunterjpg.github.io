@@ -92,10 +92,11 @@
                         </div>
                     </a>
                 </li>
-                <li><hr></li>
-                <li class="mt-4">
-                    <a href="#">Other</a>
-                </li>
+                <!-- Empty, for later expansion -->
+                <!-- <li><hr></li> -->
+                <!-- <li class="mt-4">
+                    <a href="#"></a>
+                </li> -->
             </ul>
         </aside>
         <span></span>
@@ -117,12 +118,12 @@
                         </div>
                         <div class="flex mx-auto flex-col size-14 grow">
                             <h4 class="text-lg grow m-3">What does this all mean?</h4>
-                            <hr class="mb-2">
-                            <div class="text-left">
-                                <p>I love old and obsolete design, especially the 'folk' design of ameteurs web-designers.</p>
-                                <p>This could really mean <i>anything</i>...</p>
-                                <p>Need I say more?</p>
-                            </div>
+                            <hr>
+                            <ul class="m-4 text-left">
+                                <li>Design - I love old and obsolete design, especially the 'folk' design of ameteur web-designers.</li>
+                                <li><p>Experiments - This could really mean <i>anything</i>...</p></li>
+                                <li>.gifs - Need I say more?</li>
+                            </ul>
                         </div>
                 </div>
             </section>
@@ -138,10 +139,12 @@
                             <br><br>
                             I have made a very incomplete and perhaps very inaccurate
                             tour through the 'history' of web design by creating my own interpretations of different eras
-                            of design. In fact, this page is my take on the <i>modern</i> design that we see today.
+                            of design. In fact, this page is my take on the <i>modern</i> design that we see today, with Tailwind CSS.
+                            It's very boilerplate and kind of boring.
                             <br><br>
-                            In honesty, I'm not too passionate about it and I think this shows. The old stuff on the other hand?
-                            Can't get enough.
+                            I'm not too passionate about it and I think that shows. The old stuff on the other hand?
+                            Can't get enough. Everyone today wants to make stuff that looks like Google or Youtube or Twitter,
+                            but back then designers first priority was to stand out, for better or for worse.
                         </p>
                     </div>
                 </section>
@@ -294,6 +297,7 @@
     </footer>
 
     <script>
+        // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
