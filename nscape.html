@@ -199,7 +199,8 @@
             updateTitleFields();
             updateURL();
             updateFavicon();
-            window.scrollTo(0, 0);
+            // Seems to be the cause of some security errors as
+            // window.scrollTo(0, 0);
         }
     </script>
 
