@@ -41,6 +41,7 @@ I'll try to list actual resources for assets and markup that I borrowed here as 
  - Finish up some unfinished/rough pages
  - Expand the function of Neoscape and add some era-appropriate icons
  - Get iframe content in Neoscape to respond to resizing - currently responsiveness is not functional within the iframe.
+ - Fix iframe content height breaking on page-changes
 
 ## Changelog
 #### 25/12/18

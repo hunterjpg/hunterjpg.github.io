@@ -1,6 +1,6 @@
+<!-- The skeleton of this was taken from https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856 by opaeoh: https://github.com/opaeoh -->
 <!DOCTYPE html>
 <html lang="en">
-    <!-- The skeleton of this was taken from https://gist.github.com/opaeoh/5fcdadb5bb2f701c7a5a94d79f97f856 by opaeoh: https://github.com/opaeoh -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,11 @@
     <link rel="stylesheet" href="static/style_nscape.css">
     <link rel="icon" type="image/png" href="img/nscape/icon.ico">
     <style>
-        noscript * {
-            color: white;
-            background-color: blue;
-            line-height: 1em;
-        }
-
         #viewport {
             max-width: 100%;
             max-height: max-content;
             overflow: hidden
         }
-        
         #web-iframe {
             display: block;
             border: none;
@@ -27,22 +20,16 @@
             min-width: 100%; 
             min-height: 100%;
             z-index: 1;
-            overflow: visible;
+            overflow: hidden;
         }
-
         #clock {
             font-family: 'Courier New', monospace;
             max-width: fit-content;
         }
-
         .titlefield {
             max-width: fit-content;
         }
     </style>
-
-
-
-
 </head>
 
 <body>
@@ -113,15 +100,6 @@
         </nav>
 
         <main class="content-wrapper">
-            <!-- Looks like it works decently without JS as well -->
-            <!-- <noscript>
-                <div style="width: 100%; height: 100%; padding: 1em; margin: 0;">
-                    <h1>This isn't gonna work :(</h1>
-                    <strong>This browser emulator relies on Javascript, please enable it for the intended experience.</strong>
-                    <p>There's no 3rd party scripts, I promise :)</p>
-                </div>
-            </noscript> -->
-
             <!-- The webpage content view - goes to the landing page by default -->
             <div id="viewport" class="website-content">
                 <iframe id="web-iframe" src="landing.html"></iframe>
@@ -160,7 +138,7 @@
     <script>
         // Selecting the iframe and the title IDs
         var webFrame = document.getElementById("web-iframe");
-        // var viewport = document.getElementById("viewport");
+        var viewport = document.getElementById("viewport");
         var titleFields = document.getElementsByClassName("titlefield");
         var addressField = document.getElementById("addressbar");
         var iconField = document.getElementById("iconfield");
@@ -170,14 +148,14 @@
         }
 
         function updateFrameHeight() {
-            // Dirty hack to get iframes to fit the container:
+            // Dirty hack to get iframes to fit the container, This is probably causing some issues with page height
             // set the height of the iframe as the height of the viewport
-            
-            // webFrame.style.height = webFrame.contentWindow.document.body.scrollHeight + 'px';
+            webFrame.style.height = webFrame.contentWindow.document.body.scrollHeight + 'px';
+            webFrame.contentWindow.document.body.overflow = 'visible';
             // webFrame.style.width = webFrame.contentWindow.document.body.scrollWidth + 'px';
             // webFrame.style.height = viewport.offsetHeight + 'px';
             // webFrame.style.width = viewport.scrollWidth + 'px';
-            webFrame.style.height = webFrame.contentWindow.document.documentElement.scrollHeight + 'px';
+            //webFrame.style.height = webFrame.contentWindow.document.documentElement.scrollHeight + 'px';
             webFrame.style.width = webFrame.contentWindow.document.documentElement.scrollWidth + 'px';
         }
 
@@ -208,8 +186,7 @@
             updateTitleFields();
             updateURL();
             updateFavicon();
-            // Seems to be the cause of some security errors
-            // window.scrollTo(0, 0);
+            viewport.scrollTo(0, 0);
         }
     </script>
 
