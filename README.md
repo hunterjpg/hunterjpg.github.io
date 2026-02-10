@@ -1,4 +1,4 @@
-# [smeasly.github.io](https://smeasly.github.io)
+# [hunterjpg.github.io](https://hunterjpg.github.io)
 A (semi) interactive (and incomplete) history of web design!
 
 ## About This Project
